@@ -33,6 +33,11 @@ public class IndexController {
         return "about";
     }
 
+    @GetMapping("/contact")
+    public String contact(){
+        return "contact";
+    }
+
 
 
 }
