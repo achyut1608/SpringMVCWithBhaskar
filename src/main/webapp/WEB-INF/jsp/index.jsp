@@ -29,6 +29,6 @@
     %>
     <h1>Date is : <%=new Date()%></h1>
     <a href="help">Go to Help Page</a>
-
+    <a href="contact">Go to contact Page</a>
 </body>
 </html>
