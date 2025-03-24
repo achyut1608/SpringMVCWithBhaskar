@@ -39,5 +39,11 @@ public class IndexController {
     }
 
 
+    @GetMapping("/userregistration")
+    public String userRegistration(){
+        return "userregistration";
+    }
+
+
 
 }

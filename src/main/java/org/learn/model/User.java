@@ -1,7 +1,15 @@
 package org.learn.model;
 
-public class User {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    int id;
     String txtEmail;
     String txtUsername;
     String txtPassword;
@@ -30,9 +38,17 @@ public class User {
         this.txtPassword = txtPassword;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
-        return "User{" +
+        return "User{ id=" +id+
                 "txtEmail='" + txtEmail + '\'' +
                 ", txtUsername='" + txtUsername + '\'' +
                 ", txtPassword='" + txtPassword + '\'' +
