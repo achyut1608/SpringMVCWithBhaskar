@@ -3,7 +3,9 @@ package org.learn.controller;
 import org.learn.model.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +50,27 @@ public class IndexController {
     public String complexForm(){
         return "creatingcomplexform";
     }
+
+    @GetMapping("/pathvariable/{id}/{name}")
+    public String pathvariableDemo(@PathVariable("id") int id,@PathVariable("name") String name){
+        System.out.println("id : " + id + " name : " + name);
+        Integer.parseInt(name);
+        // index page will throw error in jsp since we are not sending list tothe jsp usng model
+        return "index";
+    }
+
+    /**
+     * It will handle only controller side exception it will not handle if anyexception occures in jsp/html(views pages)
+     * @param model
+     * @return
+     *
+    @ExceptionHandler(Exception.class)
+    public String getException(Model model){
+
+        model.addAttribute("msg","Exception has occured");
+        return "exception";
+    }*/
+
 
 
 
