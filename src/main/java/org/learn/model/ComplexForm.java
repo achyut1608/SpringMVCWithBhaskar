@@ -8,11 +8,15 @@ public class ComplexForm {
     private String txtName;
     private String  txtId;
     private String txtDOB;
-    private ArrayList subjects = new ArrayList();
+    private ArrayList<String> subjects = new ArrayList<>();
     private String gender;
     private String studentType;
 
     private ComplexFormAddress address;
+
+    public ComplexForm(){
+        System.out.println("inside constructor");
+    }
 
     public String getTxtName() {
         return txtName;
@@ -38,11 +42,11 @@ public class ComplexForm {
         this.txtDOB = txtDOB;
     }
 
-    public ArrayList getSubjects() {
+    public ArrayList<String> getSubjects() {
         return subjects;
     }
 
-    public void setSubjects(ArrayList list) {
+    public void setSubjects(ArrayList<String> list) {
         this.subjects = list;
     }
 
