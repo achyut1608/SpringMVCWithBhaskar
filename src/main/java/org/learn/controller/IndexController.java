@@ -44,6 +44,11 @@ public class IndexController {
         return "userregistration";
     }
 
+    @GetMapping("/complex")
+    public String complexForm(){
+        return "creatingcomplexform";
+    }
+
 
 
 }
